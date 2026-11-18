@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConfChain</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30"><rect x="2" y="9" width="11" height="11" rx="3"/><rect x="19" y="12" width="11" height="11" rx="3"/><path d="M13 14.5h6"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">ConfChain</div>
+        <div class="brand-sub" id="conf-name">Conference Registration</div>
+      </div>
+    </div>
+
+    <label class="node-picker">
+      <span>Connected node</span>
+      <select id="node-select"></select>
+    </label>
+
+    <nav id="nav">
+      <div class="nav-group">Overview</div>
+      <a href="#dashboard" data-page="dashboard"><span class="ico">&#9638;</span>Dashboard</a>
+      <div class="nav-group">Attendee</div>
+      <a href="#wallet" data-page="wallet"><span class="ico">&#9919;</span>Wallet &amp; Registration</a>
+      <a href="#checkin" data-page="checkin"><span class="ico">&#10003;</span>Session Check-in</a>
+      <div class="nav-group">Miner</div>
+      <a href="#mining" data-page="mining"><span class="ico">&#9874;</span>Pending Pool &amp; Mining</a>
+      <a href="#difficulty" data-page="difficulty"><span class="ico">&#8645;</span>Dynamic Difficulty</a>
+      <div class="nav-group">Organizer</div>
+      <a href="#queries" data-page="queries"><span class="ico">&#9906;</span>Attendance Queries</a>
+      <div class="nav-group">Network</div>
+      <a href="#explorer" data-page="explorer"><span class="ico">&#9783;</span>Block Explorer</a>
+    </nav>
+
+    <div class="sidebar-foot" id="node-foot"></div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <h1 id="page-title">Dashboard</h1>
+      <div class="topbar-stats" id="topbar-stats"></div>
+    </header>
+    <section id="page"></section>
+  </main>
+
+  <div id="toasts" aria-live="polite"></div>
+  <dialog id="modal"><div id="modal-body"></div><form method="dialog"><button class="btn ghost">Close</button></form></dialog>
+
+  <script src="/static/wallet.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
